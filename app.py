@@ -3,7 +3,6 @@ from werkzeug.exceptions import BadRequest
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -18,13 +17,12 @@ def contribute():
             return redirect(url_for('contribute'))
     return render_template('contribute.html')
 
-//Automate path
 
 @app.route('/SystemAutomation')
 def automate():
     return render_template('automate.html')
 
-// Main Code
+// Driver Code
 
 if __name__ == "__main__":
     app.run()
