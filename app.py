@@ -7,7 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
 @app.route('/contribute', methods=['GET', 'POST'])
 def contribute():
     if request.method == 'POST':
@@ -16,7 +15,6 @@ def contribute():
         except BadRequest:
             return redirect(url_for('contribute'))
     return render_template('contribute.html')
-
 
 @app.route('/SystemAutomation')
 def automate():
